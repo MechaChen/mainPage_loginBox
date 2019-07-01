@@ -551,6 +551,7 @@
       </div>
     </div>
 
+    <!-- 小柔從這裡複製 -->
     <div class="loginBox">
       <div class="loginContent">
         <div class="intro">
@@ -587,9 +588,122 @@
       </div>
     </div>
 
+    <div class="createBox">
+      <div class="createContent">
+        <form action="">
+          <div class="inputField">
+            <label for="gender">性別</label
+            ><input type="text" name="gender" id="gender" />
+          </div>
+          <div class="inputField">
+            <label for="birthday">生日</label
+            ><input type="text" name="birthday" id="birthday" />
+          </div>
+          <div class="inputField">
+            <label for="memName">姓名</label
+            ><input type="text" name="memName" id="memName" />
+          </div>
+          <div class="inputField">
+            <label for="email">信箱</label
+            ><input type="email" name="email" id="email" />
+          </div>
+          <div class="inputField">
+            <label for="memPsw">密碼</label
+            ><input type="password" name="memPsw" id="memPsw" />
+          </div>
+          <div class="inputField">
+            <label for="checkMemPsw">確認密碼</label
+            ><input type="password" name="checkMemPsw" id="checkMemPsw" />
+          </div>
+        </form>
+        <div class="styling">
+          <div class="shapes">
+            <ul class="styles">
+              <li id="headStyle" class="active">
+                <a href="javascript:;">頭型</a>
+              </li>
+              <li id="skinStyle"><a href="javascript:;">膚色</a></li>
+              <li id="faceStyle"><a href="javascript:;">五官</a></li>
+            </ul>
+            <div class="changeStyle">
+              <div class="heads">
+                <ul>
+                  <li>
+                    <img src="imgs/createBox/head1.png" alt="Head 1" /><img
+                      src="imgs/createBox/head2.png"
+                      alt="Head 2"
+                    />
+                  </li>
+                  <li>
+                    <img src="imgs/createBox/head3.png" alt="Head 3" /><img
+                      alt="Head 4"
+                      src="imgs/createBox/head4.png"
+                    />
+                  </li>
+                  <li>
+                    <img src="imgs/createBox/head5.png" alt="Head 5" /><img
+                      src="imgs/createBox/head6.png"
+                      alt="Head 6"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="skinColor"></div>
+              <div class="facialFeatures">
+                <ul>
+                  <li>
+                    <img src="imgs/createBox/face1.png" alt="Head 1" /><img
+                      src="imgs/createBox/face2.png"
+                      alt="Head 2"
+                    />
+                  </li>
+                  <li>
+                    <img src="imgs/createBox/face3.png" alt="Head 3" /><img
+                      alt="Head 4"
+                      src="imgs/createBox/face4.png"
+                    />
+                  </li>
+                  <li>
+                    <img src="imgs/createBox/face5.png" alt="Head 5" /><img
+                      src="imgs/createBox/face6.png"
+                      alt="Head 6"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="appearance">
+            <div class="squidBorn">
+              <img src="imgs/createBox/squid.png" alt="Faceless Squid" />
+              <img
+                class="headFeature"
+                src="imgs/createBox/head1.png"
+                alt="Head"
+              />
+              <img
+                class="faceFeature"
+                src="imgs/createBox/face1.png"
+                alt="Face Feature"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="btns">
+          <a id="backToLoginBtn" href="javascript:;">回登錄頁</a>
+          <a id="createRoleBtn" href="javascript:;">創建角色</a>
+        </div>
+      </div>
+    </div>
+    <!-- 到這裡 -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js"></script>
     <script src="https://kit.fontawesome.com/629062769a.js"></script>
     <script src="js/main.js"></script>
+    <!-- 還有這兩個 js 黨 -->
+    <script src="js/loginBox.js"></script>
+    <script src="js/creatBox.js"></script>
+    <!-- 再麻煩妳 -->
   </body>
 </html>

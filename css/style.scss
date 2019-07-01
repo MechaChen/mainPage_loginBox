@@ -844,13 +844,14 @@ img {
   }
 }
 
+// 小柔從這裡複製
 .loginBox {
   position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(78, 70, 60, 0.8);
   z-index: 100;
   color: #fff;
@@ -988,3 +989,218 @@ img {
     }
   }
 }
+
+.createBox {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 70, 60, 0.8);
+  z-index: 10;
+  color: #333;
+  font-size: 18px;
+  input {
+    -webkit-appearance: none;
+    border: none;
+  }
+  .createContent {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    width: 45%;
+    padding: 2%;
+    border: 3px solid #f6f6f6;
+    border-radius: 10px;
+    background-color: #f8b853;
+    form {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 3%;
+      border-radius: 10px;
+      background-color: #fff;
+      .inputField {
+        width: 48%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 0;
+        label {
+          width: 30%;
+          text-align: center;
+        }
+        input {
+          width: 68%;
+          padding: 2% 3%;
+          border: 2px solid #f8b853;
+          border-radius: 20px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    .styling {
+      margin-top: 2%;
+      padding: 3%;
+      background-color: #fff;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      .shapes {
+        width: 48%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        div {
+          flex-grow: 1;
+        }
+        li {
+          display: inline-block;
+          margin-left: -5px;
+          padding: 2% 4%;
+          border: 2px solid #f8b853;
+          border-radius: 10px 0 0 0;
+          &:nth-child(1) {
+            margin-left: 0;
+          }
+          &:nth-child(2) {
+            border-radius: 0;
+          }
+          &:nth-child(3) {
+            border-radius: 0 10px 0 0;
+          }
+          &.active {
+            background-color: #f8b853;
+          }
+        }
+        .changeStyle {
+          position: relative;
+          border: 2px solid #f8b853;
+          border-radius: 0 10px 10px 10px;
+          .heads,
+          .facialFeatures {
+            // border: 2px solid #f8b853;
+            // border-radius: 0 10px 10px 10px;
+            ul {
+              display: flex;
+              flex-flow: column nowrap;
+              justify-content: space-between;
+              height: 100%;
+            }
+            li {
+              display: flex;
+              justify-content: space-around;
+              margin-left: 0;
+              padding: 5% 10%;
+              border: none;
+              position: relative;
+              img {
+                width: 40%;
+                cursor: pointer;
+              }
+              &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 80%;
+                height: 1px;
+                background-color: #f8b853;
+              }
+              &:last-child::after {
+                background-color: transparent;
+              }
+            }
+          }
+          .facialFeatures {
+            li {
+              img {
+                padding: 5% 0;
+                width: 60%;
+              }
+            }
+          }
+          .skinColor,
+          .facialFeatures {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            visibility: hidden;
+          }
+        }
+      }
+      .appearance {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 48%;
+        border: 2px solid #f8b853;
+        border-radius: 10px;
+        background-color: #ffedd6;
+        .squidBorn {
+          width: 60%;
+          position: relative;
+          text-align: center;
+          .headFeature {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -5%;
+            z-index: 10;
+          }
+          .faceFeature {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: 40%;
+            z-index: 100;
+          }
+        }
+      }
+    }
+    .btns {
+      padding: 3% 0 0;
+      text-align: center;
+      a {
+        display: inline-block;
+        padding: 0.8% 2%;
+        margin: 0 4%;
+        border: 3px solid #f1f1f1;
+        border-radius: 20px;
+        color: #fff;
+        background-color: #fa7979;
+        position: relative;
+        top: -3px;
+        left: -3px;
+        box-shadow: 3px 3px #e7867e;
+        transition: 0.3s;
+        &:hover {
+          top: 0;
+          left: 0;
+          box-shadow: 0 0 transparent;
+        }
+      }
+      #backToLoginBtn {
+        background-color: #fff;
+        color: #fa7979;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .createBox {
+    .createContent {
+      width: 35%;
+    }
+  }
+}
+
+// 到這裡，感恩感恩

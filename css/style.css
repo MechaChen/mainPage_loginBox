@@ -972,7 +972,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: rgba(78, 70, 60, 0.8);
   z-index: 100;
   color: #fff;
@@ -1166,5 +1166,299 @@ img {
   background-color: #f65d5d;
   -webkit-box-shadow: 3px 3px #fb8787;
           box-shadow: 3px 3px #fb8787;
+}
+
+.createBox {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(78, 70, 60, 0.8);
+  z-index: 10;
+  color: #333;
+  font-size: 18px;
+}
+
+.createBox input {
+  -webkit-appearance: none;
+  border: none;
+}
+
+.createBox .createContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 45%;
+  padding: 2%;
+  border: 3px solid #f6f6f6;
+  border-radius: 10px;
+  background-color: #f8b853;
+}
+
+.createBox .createContent form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3%;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.createBox .createContent form .inputField {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2% 0;
+}
+
+.createBox .createContent form .inputField label {
+  width: 30%;
+  text-align: center;
+}
+
+.createBox .createContent form .inputField input {
+  width: 68%;
+  padding: 2% 3%;
+  border: 2px solid #f8b853;
+  border-radius: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.createBox .createContent .styling {
+  margin-top: 2%;
+  padding: 3%;
+  background-color: #fff;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.createBox .createContent .styling .shapes {
+  width: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.createBox .createContent .styling .shapes div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.createBox .createContent .styling .shapes li {
+  display: inline-block;
+  margin-left: -5px;
+  padding: 2% 4%;
+  border: 2px solid #f8b853;
+  border-radius: 10px 0 0 0;
+}
+
+.createBox .createContent .styling .shapes li:nth-child(1) {
+  margin-left: 0;
+}
+
+.createBox .createContent .styling .shapes li:nth-child(2) {
+  border-radius: 0;
+}
+
+.createBox .createContent .styling .shapes li:nth-child(3) {
+  border-radius: 0 10px 0 0;
+}
+
+.createBox .createContent .styling .shapes li.active {
+  background-color: #f8b853;
+}
+
+.createBox .createContent .styling .shapes .changeStyle {
+  position: relative;
+  border: 2px solid #f8b853;
+  border-radius: 0 10px 10px 10px;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .heads ul,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .heads li,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 0;
+  padding: 5% 10%;
+  border: none;
+  position: relative;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .heads li img,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures li img {
+  width: 40%;
+  cursor: pointer;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .heads li::after,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 1px;
+  background-color: #f8b853;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .heads li:last-child::after,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures li:last-child::after {
+  background-color: transparent;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures li img {
+  padding: 5% 0;
+  width: 60%;
+}
+
+.createBox .createContent .styling .shapes .changeStyle .skinColor,
+.createBox .createContent .styling .shapes .changeStyle .facialFeatures {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+.createBox .createContent .styling .appearance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 48%;
+  border: 2px solid #f8b853;
+  border-radius: 10px;
+  background-color: #ffedd6;
+}
+
+.createBox .createContent .styling .appearance .squidBorn {
+  width: 60%;
+  position: relative;
+  text-align: center;
+}
+
+.createBox .createContent .styling .appearance .squidBorn .headFeature {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -5%;
+  z-index: 10;
+}
+
+.createBox .createContent .styling .appearance .squidBorn .faceFeature {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 40%;
+  z-index: 100;
+}
+
+.createBox .createContent .btns {
+  padding: 3% 0 0;
+  text-align: center;
+}
+
+.createBox .createContent .btns a {
+  display: inline-block;
+  padding: 0.8% 2%;
+  margin: 0 4%;
+  border: 3px solid #f1f1f1;
+  border-radius: 20px;
+  color: #fff;
+  background-color: #fa7979;
+  position: relative;
+  top: -3px;
+  left: -3px;
+  -webkit-box-shadow: 3px 3px #e7867e;
+          box-shadow: 3px 3px #e7867e;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.createBox .createContent .btns a:hover {
+  top: 0;
+  left: 0;
+  -webkit-box-shadow: 0 0 transparent;
+          box-shadow: 0 0 transparent;
+}
+
+.createBox .createContent .btns #backToLoginBtn {
+  background-color: #fff;
+  color: #fa7979;
+}
+
+@media screen and (min-width: 1500px) {
+  .createBox .createContent {
+    width: 35%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
